@@ -15,10 +15,23 @@
 
 */
 
-
 /* Import Basic Design Styles  */
+@import url("cw_designs.css");
 
-
+nav#bottom ul{
+   display: flex;
+   display: -webkit-flex;
+   -webkit-flex-flow: row nowrap;
+   flex-flow: row nowrap;
+   justify-content: center;
+   -webkit-justify-content: center;
+}
+nav#bottom ul li{
+   -wbkit-width: 150px;
+   width: 150px;
+   flex: 0 auto 150px;
+   -webkit-flex: 0 auto 150px; 
+}
 
 /* ===============================
 	General Styles for All Devices
@@ -31,12 +44,78 @@
 	Mobile Styles up to 480 pixels
    ===============================
 */
-	
-
-
+@media only screen and (max-width:480px){
+   body{
+      color: rgb(211,211,211);
+      background-color: rgb(51,51,51); 
+   }
+   nav#top ul{
+      -webkit-flex: row nowrap;
+      flex-flow: row nowrap;
+      font-size: 2.2em;
+      flex: 1 1 130px;
+   }
+   nav#top ul li:nth-of-type(1){
+      background: url("cw_image01.png") center/contain no-repeat;
+   }
+   nav#top ul li:nth-of-type(2){
+      background: url("cw_image02.png") center/contain no-repeat;
+   }
+   nav#top ul li:nth-of-type(3){
+      background: url("cw_image03.png") cover/contain no-repeat;
+   }   
+   nav#top ul li:nth-of-type(4){
+      background: url("cw_image04.png") center/contain no-repeat;
+   }
+   nav#top ul li:nth-of-type(5){
+      background: url("cw_image05.png") center/contain no-repeat;
+   } 
+   nav#top ul li:nth-of-type(6){
+      background: url("cw_image06.png") center/contain no-repeat;
+   }
+   p#links{
+      -webkit-flex: row wrap;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+   }
+   p#links{
+      color: white;
+      background-color:rgb(220,27,27);
+      border-radius: 20px;
+      padding: 10px;
+      text-decoration: none;
+   }        
+}  
 
 /* ============================================
 	Tablet and Desktop Devices: 481px or more 
    ============================================
 */
-
+@media only screen and (min-width:481px){
+   body{
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   }
+   article{
+      -webkit-flex: 2 1 400px;
+      flex: 2 1 400px;
+   }
+   aside{
+      -webkit-flex: 1 2 200px;
+      flex: 1 2 200px;
+   }
+   nav#top ul{
+      display: -webkit-flex;
+      display: flex;
+      background-color: rgb(51,51,51);
+      height: 50px; 
+      justify-content: center;
+      align-items: center;
+   }
+   nav#top ul li{
+      width:80px;
+   }
+   p#links{
+      display: none;
+   }
+}
